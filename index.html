@@ -3,63 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="A competitive portfolio showcasing creativity and skill.">
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <div class="contact-title">
-        <h1>Contact Info</h1>
-    </div>
-    <div class="contact-info">
-        <h2>(505) 310-9644</h2>
-        <h2>gustavoglicon@outlook.com</h2>
-    </div>
-    <div class="outer_pic">
-        <div class="pic">
-            <img src="./images/IMG_3566.png">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    <div id="title">
-        <h1 id="firstName">Gustavo</h1>
-        <h1 id="lastName">Gonzalez</h1>
-    </div>
-    <div class="about_me">
-        <h1>About Me</h1>
-        <p>
-            I am an up-and-coming software engineer with a passion for problem solving and creating video games on my free time,
-            I have a strong foundation in Javascript, Python and frameworks like React, Flask, and Express, I love tackling challenges 
-            that make me grow as a person and I am always trying to expand my skill set. Whether its frontend or backend, I enjoy creating seamless and engaging user experiences through clean maintainable code 
-            .Im exited to contribute to projects that push the boundaries of technology and help make a positive impact.
-        </p>
-    </div>
-    <div id="link_title">
-        <h1>My Links</h1>
-    </div>
-    <div class="bigger-link-container">
-        <div>
-            <a href="https://www.linkedin.com/in/gustavo-gonzalez-660894286/" target="_blank">
-                <div class="link-container">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/480px-LinkedIn_logo_initials.png"/>
-                </div>
-                <h1 class="link-title2">LinkedIn</h1>
-            </a>    
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2 class="hero-title">Hi, I'm Gustavo Gonzalez</h2>
+            <p class="hero-subtitle">I am a Software Engineer looking to get into the Tech Job Market</p>
+            <a href="#projects" class="btn btn-primary">Explore My Work</a>
         </div>
-        
-        <div>
-            <a href="https://github.com/MrTavo16/" target="_blank">
-                <div class="link-container">
-                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"/>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                I’m a creative professional specializing in web development and UI/UX design. 
+                My mission is to craft visually stunning and highly functional digital experiences.
+            </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <h3>Frontend Development</h3>
+                    <p>Expertise in React, Vanilla Javascript, and flask for frontend development</p>
                 </div>
-                <h1 class="link-title">Github</h1>
-            </a>
-         </div>
-        
-    </div>
-    
+                <div class="skill-card">
+                    <h3>Backend Development</h3>
+                    <p>Skilled in Node.js, express, Django, and database management.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>UI/UX Design</h3>
+                    <p>Proficiency in Figma, Adobe XD, and user-centered design principles.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Performance Optimization</h3>
+                    <p>Optimizing for speed, scalability, and reliability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Work</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Airbnb Clone</h3>
+                    <p>A clone of the popular hospitality site Airbnb</p>
+                    <a href="#" class="btn btn-secondary">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Movie Ranks</h3>
+                    <p>An original site where you can rank trending movies</p>
+                    <a href="#" class="btn btn-secondary">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Habitikamagika</h3>
+                    <p>A goal setting app inspired from the app Hibitica</p>
+                    <a href="#" class="btn btn-secondary">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>I'd love to collaborate! Feel free to reach out!</p>
+            <div>gustavoglicon@outlook.com</div>
+            <div>+1(505) 310-9644</div>
+        </div>
+    </section>
 </body>
 </html>
