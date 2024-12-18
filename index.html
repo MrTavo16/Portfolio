@@ -3,103 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A competitive portfolio showcasing creativity and skill.">
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h2 class="hero-title">Hi, I'm Gustavo Gonzalez</h2>
-            <p class="hero-subtitle">I am a Software Engineer looking to get into the Tech Job Market</p>
-            <a href="#projects" class="btn btn-primary">Explore My Work</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
+        <div class="about-content">
+            <img src="./images/unnamed.jpg" alt="Portrait" class="portrait">
             <h2>About Me</h2>
-            <p>
-                I’m a creative professional specializing in web development and UI/UX design. 
-                My mission is to craft visually stunning and highly functional digital experiences.
-            </p>
-            </div>
+            <p>Hello! My name is Gustavo, and I am a software developer eager to grow and make an impact in the tech world. I have great experience with Javascript, Python, express, Flask, SQL, and currently learning C at a deep level. I enjoy working on projects that challenge me to learn and improve my skills, and particularly interested in web development, learning more about embedded systems, and for fun I am learing to develop games with the Godot engine. Outside of coding, I enjoy gaming, going to the gym, and spending time with family.</p>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>My Skills</h2>
-            <div class="skill-grid">
-                <div class="skill-card">
-                    <h3>Frontend Development</h3>
-                    <p>Expertise in React, Vanilla Javascript, and flask for frontend development</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Backend Development</h3>
-                    <p>Skilled in Node.js, express, Django, and database management.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>UI/UX Design</h3>
-                    <p>Proficiency in Figma, Adobe XD, and user-centered design principles.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Performance Optimization</h3>
-                    <p>Optimizing for speed, scalability, and reliability.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
     <section id="projects" class="projects">
-        <div class="container">
-            <h2>My Work</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Airbnb Clone</h3>
-                    <p>A clone of the popular hospitality site Airbnb</p>
-                    <a href="#" class="btn btn-secondary">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Movie Ranks</h3>
-                    <p>An original site where you can rank trending movies</p>
-                    <a href="#" class="btn btn-secondary">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Habitikamagika</h3>
-                    <p>A goal setting app inspired from the app Hibitica</p>
-                    <a href="#" class="btn btn-secondary">View Project</a>
-                </div>
+        <h2>My Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <h3>Airbnb Clone</h3>
+                <p>A clone to the popular hospitality webapp Airbnb, packed with reserving, creating, deleting and even reviewing spots!</p>
+                <a target="_blank" href="https://tavos-authme.onrender.com/">Link</a>
+            </div>
+            <div class="project">
+                <h3>Habiticka Magicka</h3>
+                <p>Based on the goal setting app Habitica, you can create and gamify your goals incentivising their completion. You can also create your own avatar for identity</p>
+                <a target="_blank" href="https://habica-magicka.onrender.com/">Link</a>
+            </div>
+            <div class="project">
+                <h3>Movie Ranks</h3>
+                <p>A original webapp where you can see the trending movies and interact with them, you can also create a list that can be seen by other users.</p>
+                <a target="_blank" href="https://movie-ranks.onrender.com/">Link</a>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>I'd love to collaborate! Feel free to reach out!</p>
-            <div>gustavoglicon@outlook.com</div>
-            <div>+1(505) 310-9644</div>
-        </div>
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate or have any questions, feel free to get in touch!</p>
+        <a  href="mailto:gustavoglicon@outlook.com">gustavoglicon@outlook.com</a>
+        <div></div>
+        <a href="tel:+15053109644">+1 (505) 310-9644</a>
     </section>
+
 </body>
 </html>
