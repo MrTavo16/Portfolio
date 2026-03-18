@@ -2,57 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <title>Countdown 😉</title>
+    <style>
+        body { 
+            background: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0; 
+        }
+        h1 { margin-bottom: 20px; font-weight: 300; letter-spacing: 2px; }
+        .timer { display: flex; gap: 30px; }
+        .unit { text-align: center; }
+        .number { display: block; font-size: 4rem; font-weight: bold; min-width: 100px; }
+        .label { font-size: 0.8rem; text-transform: uppercase; color: #94a3b8; }
+        .expired { font-size: 2rem; color: #ef4444; display: none; }
+    </style>
 </head>
 <body>
 
-    <section id="about" class="about">
-        <div class="about-content">
-            <img src="./images/unnamed.jpg" alt="Portrait" class="portrait">
-            <h2>About Me</h2>
-            <p>Hello! My name is Gustavo, and I am a software developer eager to grow and make an impact in the tech world. I have great experience with Javascript, Python, express, Flask, SQL, and currently learning C at a deep level. I enjoy working on projects that challenge me to learn and improve my skills, and particularly interested in web development, learning more about embedded systems, and for fun I am learing to develop games with the Godot engine. Outside of coding, I enjoy gaming, going to the gym, and spending time with family.</p>
-        </div>
-    </section>
+    <h1>Days Till I see you ❤️</h1>
+    
+    <div class="timer" id="timer">
+        <div class="unit"><span class="number" id="days">00</span><span class="label">Days</span></div>
+        <div class="unit"><span class="number" id="hours">00</span><span class="label">Hours</span></div>
+        <div class="unit"><span class="number" id="minutes">00</span><span class="label">Minutes</span></div>
+        <div class="unit"><span class="number" id="seconds">00</span><span class="label">Seconds</span></div>
+    </div>
+    <div id="message" class="expired">The day has arrived!</div>
 
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-list">
-            <div class="project">
-                <h3>Airbnb Clone</h3>
-                <p>A clone to the popular hospitality webapp Airbnb, packed with reserving, creating, deleting and even reviewing spots!</p>
-                <a target="_blank" href="https://tavos-authme.onrender.com/">Link</a>
-            </div>
-            <div class="project">
-                <h3>Habiticka Magicka</h3>
-                <p>Based on the goal setting app Habitica, you can create and gamify your goals incentivising their completion. You can also create your own avatar for identity</p>
-                <a target="_blank" href="https://habica-magicka.onrender.com/">Link</a>
-            </div>
-            <div class="project">
-                <h3>Movie Ranks</h3>
-                <p>A original webapp where you can see the trending movies and interact with them, you can also create a list that can be seen by other users.</p>
-                <a target="_blank" href="https://movie-ranks.onrender.com/">Link</a>
-            </div>
-        </div>
-    </section>
+    <script>
+        // Set target to April 29 of the current year (2026)
+        const targetDate = new Date("April 29, 2026 00:00:00").getTime();
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to collaborate or have any questions, feel free to get in touch!</p>
-        <a  href="mailto:gustavoglicon@outlook.com">gustavoglicon@outlook.com</a>
-        <div></div>
-        <a href="tel:+15053109644">+1 (505) 310-9644</a>
-        <div class="personal-links">
-            <a target="_blank" href="https://www.linkedin.com/in/gustavo-gonzalez-660894286/">LinkedIn</a>
-            <div></div>
-            <a target="_blank" href="https://github.com/MrTavo16">Github</a>
-        </div>
-    </section>
+        const interval = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
 
+            // Time calculations
+            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result
+            document.getElementById("days").innerText = d.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = h.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = m.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = s.toString().padStart(2, '0');
+
+            // If the countdown is finished
+            if (distance < 0) {
+                clearInterval(interval);
+                document.getElementById("timer").style.display = "none";
+                document.getElementById("message").style.display = "block";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
